@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #a0a0a0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 13px;
+    --color: #eee;
+    color: var(--color);
+    background-color: #23282E;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    text-align: center;
+    padding-top: 10px;
+}
+header nav a{
+    margin: 0 30px;
+    color: var(--color);
+    font-size: small;
+}
+
+.tab{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-size: 50%;
+}
+.tab .container{
+    width: 1140px;
+    max-width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+}
+#about{
+    background-color: #16222D;
+    overflow: auto;
+    height: auto;
+}
+#about .avatar{
+    text-align: right;
+    height: 80%;
+}
+#about .avatar img{
+    height: 100%;
+    filter: saturate(0.6);
+    margin-right: 20px;
+}
+#about .content{
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    width: 500px;
+    max-width: 80%;
+}
+#about .content .name,
+#about .content .job{
+    font-size: 5em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1em;
+}
+.text-gradient{
+    background-image: linear-gradient(
+        to right, #329D9C, #7BE495
+    );
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+#about .content .des{
+    margin-top: 1.2em;
+    width: 70%;
+    text-align: left;
+}
+#about .content .des a{
+    margin-top: 1.2em;
+}
+
+/* social */
+.social-links {
+    margin-top: 4em; /* Adjust margin as needed */
+    margin-left: 0px; /* Move the entire social links container to the right */
+}
+
+.social-links a {
+    margin-right: 20px; /* Space between icons */
+    color: var(--color); /* Adjust color to match your theme */
+    font-size: 4em; /* Adjust size as needed */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-links a:hover {
+    color: #329D9C; /* Adjust hover color to your liking */
+}
+
+/* work */
+#work{
+    background-color: #7697A0;
+    color: #444B57;
+}
+#work .list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 50px;
+}
+#work .list .item img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+#work .list .item{
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+}
+#work .list .item .index{
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    transform: translateY(-100%);
+    padding: 10px;
+    font-style: italic;
+    border-top-right-radius: 20px;
+}
+#work .list .item .name{
+    font-weight: bold;
+    font-size: large;
+    padding: 10px;
+}
+#work .list .item .des{
+    padding: 0 10px 10px 10px;
+    text-align: justify;
+}
+#work .list .item .author{
+    padding: 10px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+#work .list .item .job{
+    font-weight: bold;
+}
+#work .container{
+    overflow: auto;
+}
+
+/* timeline */
+#timeline{
+    background-color: #242A34;
+}
+#timeline .list{
+    height: 100%;
+    width: max-content;
+    display: flex;
+    justify-content: left;
+    box-sizing: border-box;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+#timeline .list .item{
+    display: grid;
+    grid-template-rows: 1fr 50px 1fr;
+    gap: 20px;
+    width: 200px;
+    flex-shrink: 0;
+}
+#timeline .list .item i{
+    background-color: #444B57;
+    width: 50px;
+    color: #16222D;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+#timeline .list .item .time{
+    display: flex;
+    align-items: end;
+    font-size: large;
+}
+#timeline .list .item .content .job{
+    font-size: large;
+}
+#timeline .list .item .content .company{
+    color: #7BE495;
+}
+#timeline .list .item .content .des{
+    font-size: 0.8em;
+    opacity: 0.7;
+}
+#timeline .list .item:nth-child(odd) .content{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+#timeline .list .item:nth-child(odd) .time{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-items: start;
+}
+#timeline .list::before{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #444B57;
+    content: '';
+    z-index: -1;
+}
+#timeline .container{
+    overflow: auto;
+    padding: 50px;
+}
+
+@media screen and (max-width: 991px){
+    /* ipad, tablets */
+    #about .avatar img{
+        transform: translateX(200px);
+    }
+
+}
+@media screen and (max-width: 767px){
+    /* Mobile Devices */
+    body{
+        font-size: 10px;
+    }
+    header nav a{
+        margin: 10px;
+    }
+    #about .avatar img{
+        transform: none;
+    }
+    #about .content{
+        left: 20px;
+    }
+    #about .content .name{
+        font-size: 4em;
+    }
+    #about .content i{
+        position: unset;
+    }
+    #work .list{
+        padding: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+    #work .list .item img{
+        height: 100px;
+    }
+}
+
+/* slider */
+.slide-option {
+    margin: -50px 0;
+    padding: 20px;
+    overflow: hidden; /* Ensure overflow is hidden to hide any overflow issues */
+}
+
+.slide-option .container {
+    max-width: 100%; /* Adjust as needed based on your design */
+    overflow: hidden; /* Ensure container doesn't overflow */
+}
+
+.highway-slider {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow to contain sliding items */
+}
+
+.highway-barrier {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensure the barrier hides overflow */
+}
+
+.highway-lane {
+    display: flex;
+    animation: translateinfinite 30s linear infinite; /* Adjust animation duration as needed */
+}
+
+.highway-car {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #16222D;
+    color: #7BE495;
+    font-size: 65px;
+    flex-shrink: 0; /* Ensure items don't shrink */
+}
+
+@keyframes translateinfinite {
+    100% {
+        transform: translateX(calc(-180px * 12));
+    }
+}
+
+/* effect */
+.tab{
+    position: fixed;
+    inset: 0 0 0 0;
+    z-index: 1;
+}
+#about{
+    z-index: 2;
+}
+
+.tab.active{
+    --x: 50%;
+    --y: 50%;
+    clip-path: circle(
+        200% at var(--x) var(--y)
+    );
+    animation: showTab 1s ease-in-out 1;
+}
+@keyframes showTab{
+    from{
+        clip-path: circle(
+            0% at var(--x) var(--y)
+        );
+    }
+}
